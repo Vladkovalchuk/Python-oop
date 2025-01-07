@@ -17,7 +17,6 @@ class Course:
         if len(self.students) < self.max_students:
             self.students.append(student)
             return True
-        #print('overload')
         return False
 
     def get_average_grade(self):
@@ -29,6 +28,7 @@ class Course:
 st1 = Student('First', 18, 55)
 st2 = Student('Second', 19, 66)
 st3 = Student('Third', 91, 99)
+
 course_a  = Course('Math', 2)
 course_a.add_student(st1)
 print(course_a)
@@ -38,7 +38,7 @@ print(course_a.students[0].name)
 course_a.add_student(st2)
 print(course_a.students[1].name)
 
-course_a.add_student(st3)
+print(course_a.add_student(st3))
 print(course_a.get_average_grade())
-#print(course_a.students[2].name)
+
 
